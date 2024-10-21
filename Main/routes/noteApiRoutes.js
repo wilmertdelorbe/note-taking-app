@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const noteStorage = require('../utils/noteStorage');
-
+const noteStorage = require('../database/dataHandler');
 // Fetch all notes
 router.get('/notes', async (req, res) => {
     try {

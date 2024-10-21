@@ -12,3 +12,6 @@ router.get('*', (req, res) => {
 });
 
 module.exports = router;
+
+// This file handles serving my HTML pages
+// It sends the note editor page for /notes and the home page for all other routes

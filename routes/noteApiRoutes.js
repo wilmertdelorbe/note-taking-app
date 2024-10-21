@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const noteStorage = require('../database/dataHandler');
+
 // Fetch all notes
 router.get('/notes', async (req, res) => {
     try {
@@ -13,7 +14,7 @@ router.get('/notes', async (req, res) => {
 // Create a new note
 router.post('/notes', async (req, res) => {
     try {
-        const newNote = await noteStorage.addNote(req.body);
+        const newNote = await noteStorage.createNote(req.body);
         res.json(newNote);
     } catch (err) {
         res.status(500).json({ error: 'Failed to create note' });
@@ -31,3 +32,6 @@ router.delete('/notes/:id', async (req, res) => {
 });
 
 module.exports = router;
+
+// This file handles all the API routes for my notes
+// It uses the dataHandler to interact with the stored notes

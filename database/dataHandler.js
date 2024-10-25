@@ -6,8 +6,13 @@ const DATA_FILE = path.join(__dirname, 'noteStorage.json');
 
 class DataHandler {
   async readNotes() {
-    const data = await fs.readFile(DATA_FILE, 'utf8');
-    return JSON.parse(data);
+    try {
+      const data = await fs.readFile(DATA_FILE, 'utf8');
+      return JSON.parse(data);
+    } catch (error) {
+      // If file doesn't exist or is empty, return an empty array
+      return [];
+    }
   }
 
   async writeNotes(notes) {
@@ -19,11 +24,11 @@ class DataHandler {
   }
 
   async createNote(note) {
-    const { title, content } = note;
-    if (!title || !content) {
-      throw new Error("Note 'title' and 'content' are required");
+    const { title, text } = note; // Changed from 'content' to 'text'
+    if (!title || !text) {
+      throw new Error("Note 'title' and 'text' are required");
     }
-    const newNote = { id: uuidv4(), title, content };
+    const newNote = { id: uuidv4(), title, text };
     const notes = await this.readNotes();
     notes.push(newNote);
     await this.writeNotes(notes);

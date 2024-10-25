@@ -1,46 +1,23 @@
-# note-taking-app
+# Note Taker Application
+
 ## Description
+This is a simple note-taking application built with Express.js.
 
-Note Organizer is a simple note-taking application built with Express.js. It allows users to create, save, and delete notes, providing an easy way to keep track of tasks, ideas, and important information.
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
-- [Questions](#questions)
+## Deployed Application
+[Link to deployed application](https://note-taker-app-jk2x.onrender.com/)
 
 ## Installation
-
-To install the necessary dependencies, run the following command:
-npm install
+1. Clone the repository
+2. Run `npm install` to install dependencies
+3. Run `npm start` to start the server
 
 ## Usage
-
-To start the server, run:
-npm start
-
-For development with auto-restart on file changes, use:
-npm run dev
-
-Then, open your browser and navigate to `http://localhost:3000` to use the application.
-
-## Features
-
-- Create and save notes
-- View previously saved notes
-- Delete unwanted notes
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. Open the application in your web browser
+2. Click on "Get Started" to begin taking notes
+3. Enter a note title and content, then click the save icon
+4. View your saved notes in the left-hand column
+5. Click on a saved note to view its contents
+6. Click the trash icon to delete a note
 
 ## License
-
 This project is licensed under the MIT License.
-
-## Questions
-
-If you have any questions about the repo, open an issue or contact me directly at wilmertdelorbe21@gmail.com. You can find more of my work at [wilmertdelorbe](https://github.com/wilmertdelorbe).
